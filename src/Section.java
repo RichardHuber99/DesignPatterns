@@ -22,6 +22,7 @@ public class Section implements Element{
         return content.get(index);
     }
 
+    //
     public void print(){
         System.out.println("Section: "+this.sectionTitle);
         for(Element i : content){
