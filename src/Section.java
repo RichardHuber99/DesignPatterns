@@ -30,4 +30,12 @@ public class Section implements Element{
         }
     }
 
+    public void accept(Visitor visitor){
+        for (Element i : content){
+            i.accept(visitor);
+        }
+        visitor.visit(this);
+    }
+
+
 }

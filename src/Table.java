@@ -10,4 +10,7 @@ public class Table implements Element{
         System.out.println("Table with name: "+this.name);
     }
 
+    public void accept(Visitor visitor){
+        visitor.visit(this);
+    }
 }

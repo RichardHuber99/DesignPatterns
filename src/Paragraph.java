@@ -9,7 +9,7 @@ public class Paragraph implements Element{
 
     public void print(){
         if (alignStrategy == null){
-            System.out.println(this);
+            System.out.println(this.name);
         }else{
             alignStrategy.render(this);
         }
@@ -23,5 +23,9 @@ public class Paragraph implements Element{
 
     public void setAlignStrategy(AlignStrategy alignStrategy) {
         this.alignStrategy = alignStrategy;
+    }
+
+    public void accept(Visitor visitor){
+        visitor.visit(this);
     }
 }
